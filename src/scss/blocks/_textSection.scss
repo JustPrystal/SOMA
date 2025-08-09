@@ -1,0 +1,30 @@
+section.text-section{
+    padding: 200px 40px;
+    background-color: $lightBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .inner{
+        max-width: 1660px;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        position: relative;
+        z-index: 2;
+        .text-wrap{
+            max-width: 1020px;
+            width: 100%;
+            p{
+                font-size: 32px;
+                font-family: $sourceSans;
+                color: $white;
+                margin-bottom: 60px;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
