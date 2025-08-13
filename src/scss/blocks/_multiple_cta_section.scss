@@ -1,0 +1,203 @@
+section.multiple-cta-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightBlack;
+    padding: 100px 40px;
+    position: relative;
+    overflow: clip;
+    @include responsive(sm){
+        padding: 60px 20px 100px;
+    }
+    .inner{
+        max-width: 1660px;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        .heading{
+            color: $white;
+            font-family: $rexton;
+            font-weight: 700;
+            line-height: 110%;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 100px;
+            @include responsive(xl){
+                margin-bottom: 60px;
+            }
+            @include responsive(md){
+                font-size: 40px;    
+            }
+            @include responsive(sm){
+                font-size: 22px;
+                margin-bottom: 50px;
+            }
+        }
+        .cta-content-wrap{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 100px;
+            column-gap: 40px;
+            justify-content: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            @include responsive(xl){
+                row-gap: 60px;
+            }
+            @include responsive(lg){
+                column-gap: 20px;
+            }
+            @include responsive(md){
+                row-gap: 40px;
+                column-gap: 0px;
+            }
+            .cta-wrap{
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include responsive(md){
+                    width: 45%;
+                }
+                @include responsive(sm){
+                    width: 100%;
+                }
+                .heading{
+                    font-size: 30px;
+                    margin-bottom: 40px;
+                    max-width: 280px;
+                    @include responsive(md){
+                        font-size: 20px;
+                        margin-bottom: 30px;
+                    }
+                    @include responsive(sm){
+                        font-size: 16px;
+                    }
+                }
+                .button-wrap{
+                    display: flex;
+                    margin: auto 0 0 0;
+                    .global-button{
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+        .slider-wrap{
+            background-color: $lightGray;
+            padding: 100px;
+            border-radius: 40px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            max-width: 1280px;
+            margin: 0 auto;
+            visibility: hidden;
+            transform: translateX(-200%);
+            pointer-events: none;
+            @include responsive(xl){
+                padding: 60px;
+            }
+            @include responsive(lg){
+                padding: 40px;
+            }
+            @include responsive(sm){
+                padding: 40px 20px;
+                top: 75px;
+            }
+            &.visible{
+                visibility: visible;
+                transform: translateX(0);
+                pointer-events: all;
+            }
+            .close-btn{
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                top: 30px;
+                right: 30px;
+                background-color: $yellow;
+                border-radius: 50%;
+                padding: 8px;
+                cursor: pointer;
+                z-index: 100;
+                @include responsive(lg){
+                    width: 40px;
+                    height: 40px;
+                    top: 20px;
+                    right: 20px;
+                }
+                @include responsive(sm){
+                    top: -10px;
+                    right: -10px;
+                }
+                .cross{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .heading{
+                font-size: 32px;
+                color: $lightBlack;
+                margin-bottom: 50px;
+                @include responsive(xl){
+                    margin-bottom: 30px;
+                }
+                @include responsive(md){
+                    font-size: 20px;
+                }
+                @include responsive(sm){
+                    font-size: 16px;
+                }
+            }
+            .description-wrap{
+                p{
+                    font-family: $sourceSans;
+                    font-size: 26px;
+                    color: $lightBlack;
+                    letter-spacing: 0.1em;
+                    margin-bottom: 40px;
+                    @include responsive(xl){
+                        margin-bottom: 20px;
+                    }
+                    @include responsive(md){
+                        font-size: 16px;
+                    }
+                    @include responsive(sm){
+                        font-size: 12px;
+                    }
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .slick-arrow{
+                width: 15px;
+                height: 25px;
+                &::before{
+                    content:unset;
+                }
+                &.slick-next{
+                    right: -60px;
+                    @include responsive(xl){
+                        right: -40px;
+                    }
+                    @include responsive(xl){
+                        right: -30px;
+                    }
+                }
+                &.slick-prev{
+                    left: -60px;
+                    @include responsive(xl){
+                        left: -40px;
+                    }
+                    @include responsive(xl){
+                        left: -30px;
+                    }
+                }
+            }
+        }
+    }
+}

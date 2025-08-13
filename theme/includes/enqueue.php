@@ -16,6 +16,18 @@
 				"path" => $templatedir . '/style.css',
 				"version" => filemtime(get_theme_file_path('/style.css'))
 			],
+			[
+				"name" => 'slick-css',
+				"type" => 'css',
+				"path" => 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+				"version" => '1.8.1'
+			],
+			[
+				"name" => 'slick-theme-css',
+				"type" => 'css',
+				"path" => 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css',
+				"version" => '1.8.1'
+			],
 			
 			[
 				"name" => 'jquery.js', 
@@ -44,6 +56,13 @@
 				"path" => 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js',
 				"version" => '1.0.0',
 				"loadInFooter" => false
+			],
+			[
+				"name" => 'slick-js',
+				"type" => 'js',
+				"path" => 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+				"version" => '1.8.1',
+				"loadInFooter" => true
 			]
 		];
 		

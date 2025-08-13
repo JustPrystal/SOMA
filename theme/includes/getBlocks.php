@@ -29,6 +29,18 @@
             case 'accordian':
               include 'blocks/accordian.php';
               break;
+            case 'two_column':
+              include 'blocks/two_column.php';
+              break;
+            case 'text_two_column':
+              include 'blocks/text_two_column.php';
+              break;
+            case 'multiple_cta_section':
+              include 'blocks/multiple_cta_section.php';
+              break;
+            case 'contact':
+              include 'blocks/contact.php';
+              break;
             
           }
         }

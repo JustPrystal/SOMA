@@ -4,13 +4,27 @@
     justify-content: center;
     position: relative;
     z-index: 10;
+    @include responsive(lg){
+        padding: 80px 40px 0px 40px;
+    }
+    @include responsive(sm){
+        padding: 60px 20px 0px 20px;
+    }
+    @include responsive(xs){
+        padding: 50px 20px 0px 20px;
+    }
     .inner{
         max-width: 1660px;
         width: 100%;
         align-items: center;
-        justify-content: baseline;
+        justify-content: flex-start;
         gap: 30px;
         display: flex;
+        @include responsive(sm){
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 15px;
+        }
         .button-wrap{
             width: fit-content;
             height: fit-content;

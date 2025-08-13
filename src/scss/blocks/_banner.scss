@@ -11,9 +11,17 @@ section.banner{
         padding: 140px 0 0 40px;
     }
     @include responsive(lg){
-        margin-top: -109px;
-        padding: 140px 0 0 40px;
+        margin-top: -136px;
+        padding: 180px 0 0 40px;
     }
+    @include responsive(sm){
+        margin-top: -169px;
+        padding: 180px 0 0 20px;
+    }   
+    @include responsive(xs){
+        padding: 160px 0 0 20px;
+        margin-top: -134px;
+    }   
     .inner{
         display: flex;
         // max-width: 1660px;
@@ -25,7 +33,10 @@ section.banner{
         .left{
             width: 25%;
             display: flex;
-            justify-content: baseline;
+            justify-content: flex-start;
+            @include responsive(xs){
+                width: fit-content;
+            }
             .logo-wrap{
                 width: fit-content;
                 img{
@@ -33,6 +44,9 @@ section.banner{
                     max-width: 340px;
                     @include responsive(xl){
                         max-width: 280px;       
+                    }
+                    @include responsive(xs){
+                        max-width: 140px;       
                     }
                 }
             }
@@ -51,6 +65,10 @@ section.banner{
                 img{
                     width: 100%;
                     display: block;
+                    pointer-events: none;
+                    @include responsive(xs){
+                        width: 125%;
+                    }
                 }
                 .text-wrap{
                     max-width: 470px;
@@ -58,12 +76,30 @@ section.banner{
                     position: absolute;
                     top: -120px;
                     left: 20%;
+                    @include responsive(md){
+                        max-width: 350px;
+                        padding: 90px 50px;
+                        left: 25%;
+                    }
+                    @include responsive(sm){
+                        max-width: 250px;   
+                        padding: 70px 40px;
+                    }
+                    @include responsive(xs){
+                        left: 37%;
+                    }
                     p{
                         font-family: $rexton;
                         font-size: 30px;
                         line-height: 120%;
                         color: $white;
                         text-align: center;
+                        @include responsive(md){
+                            font-size: 20px;
+                        }
+                        @include responsive(sm){
+                            font-size: 14px;
+                        }
                         span.yellow{
                             color: $yellow;
                         }

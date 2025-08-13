@@ -6,6 +6,12 @@ section.text-section{
     align-items: center;
     position: relative;
     overflow: hidden;
+    @include responsive(md){
+        padding: 120px 40px;
+    }
+    @include responsive(md){
+        padding: 60px 20px; 
+    }
     .inner{
         max-width: 1660px;
         width: 100%;
@@ -14,13 +20,23 @@ section.text-section{
         position: relative;
         z-index: 2;
         .text-wrap{
-            max-width: 1020px;
+            max-width: 62%;
             width: 100%;
+            @include responsive(xs){
+                max-width: 70%;
+            }
             p{
                 font-size: 32px;
                 font-family: $sourceSans;
                 color: $white;
                 margin-bottom: 60px;
+                @include responsive(md){
+                    font-size: 24px;
+                }
+                @include responsive(sm){
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
                 &:last-of-type{
                     margin-bottom: 0;
                 }

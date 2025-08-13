@@ -11,6 +11,23 @@
         right: -2%;
         bottom: 0;
         background-size: cover;
+        background-repeat: no-repeat;
+        @media(max-width:991px){
+            width: 500px;
+            height: 500px;
+            right: -10%;
+        }
+        @media(max-width:767px){
+            width: 300px;
+            height: 300px;
+            right: -10%;
+            background-size: contain;
+        }
+        @media(max-width:567px){
+            /* width: 300px;
+            height: 300px; */
+            right: -15%;
+        }
     }
 </style>
 

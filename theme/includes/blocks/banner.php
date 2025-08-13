@@ -10,7 +10,6 @@
             background-repeat: no-repeat;
             background-position: center;
             z-index: 1;
-            pointer-events: none;
         }
         <?php }?>
         <?php if ($banner['top_right_overlay']) { ?>
@@ -25,6 +24,18 @@
                 z-index: 1;
                 background-repeat: no-repeat;
                 pointer-events: none;
+                @media(max-width:1249px){
+                    top:-60px;
+                }
+                @media(max-width:767px){
+                    background-size: contain;
+                    right: -5%;
+                    top:-20px;
+                }
+                @media(max-width:575px){
+                    max-width:330px;
+                    min-height:330px;
+                }
             }
             <?php }?>
             <?php if ($banner['bottom_left_overlay']['overlay']) { ?>
@@ -45,6 +56,14 @@
                     @media(max-width:1600px){
                         min-height: 515px;
                         width: 620px;
+                    }
+                    @media(max-width:991px){
+                        min-height: 390px;
+                        width: 530px;
+                    }
+                    @media(max-width:575px){
+                        min-height: 270px;
+                        width: 330px;
                     }
                 }
                 <?php }?>

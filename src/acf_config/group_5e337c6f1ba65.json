@@ -137,6 +137,130 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_689a77e88be77": {
+                    "key": "layout_689a77e88be77",
+                    "name": "two_column",
+                    "label": "Two Column",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_689a77f08be78",
+                            "label": "Fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_689a77797ad2c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_689a8d5ae0ef5": {
+                    "key": "layout_689a8d5ae0ef5",
+                    "name": "text_two_column",
+                    "label": "Text Two Column",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_689a8d66e0ef6",
+                            "label": "Fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_689a8b3904c5f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_689b9a8959d96": {
+                    "key": "layout_689b9a8959d96",
+                    "name": "multiple_cta_section",
+                    "label": "Multiple CTA Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_689b9a9459d97",
+                            "label": "Fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_689b9a4407364"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_689bd223bf7fe": {
+                    "key": "layout_689bd223bf7fe",
+                    "name": "contact",
+                    "label": "Contact",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_689bd229bf7ff",
+                            "label": "Fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_689bd09e03fd0"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -172,5 +296,5 @@
     ],
     "active": 1,
     "description": "Block Chooser for all content types that will have blocks.",
-    "modified": 1754700929
+    "modified": 1755042363
 }

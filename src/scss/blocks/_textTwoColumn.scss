@@ -1,0 +1,181 @@
+section.text-two-column{
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightGray;
+    @include responsive(sm){
+        padding: 60px 20px;
+    }
+    .inner{
+        max-width: 1660px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .heading{
+            color: $lightBlack;
+            font-family: $rexton;
+            font-weight: 700;
+            line-height: 110%;
+            &.title{
+                font-size: 50px;
+                text-align: center;
+                margin-bottom: 100px;
+                @include responsive(xl){
+                    margin-bottom: 60px;
+                }
+                @include responsive(md){
+                    font-size: 40px;
+                    margin-bottom: 40px;
+                }
+                @include responsive(sm){
+                    font-size: 22px;
+                }
+            }
+        }
+        .content-wrap{
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            @include responsive(sm){
+                flex-direction: column;
+                gap: 60px;
+            }
+            .left{
+                display: flex;
+                flex-direction: column; 
+                width: 38%;
+
+                @include responsive(sm){
+                    width: 100%;
+                }
+                .description-wrap{
+                    p{
+                        font-size: 30px;
+                        font-family: $rexton;
+                        color: $lightBlack;
+                        font-weight: 700;
+                        margin-bottom: 40px;
+                        text-transform: uppercase; 
+                        @include responsive(md){
+                            font-size: 20px;
+                            margin-bottom: 30px;
+                        }
+                        @include responsive(sm){
+                            font-size: 14px;
+                            margin-bottom: 15px;
+                        }
+                        .yellow{
+                            color: $yellow;
+                        }
+                        .subtext{
+                            font-size: 16px;
+                            @include responsive(md){
+                                font-size: 14px;
+                            }
+                            @include responsive(sm){
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+                .button-wrap{
+                    display: flex;
+                    width: fit-content;
+                }
+            }
+            .right{
+                width: 50%;
+                @include responsive(md){
+                    width: 62%;
+                }
+                @include responsive(sm){
+                    width: 100%;
+                }
+                .variations{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 100px;
+                    margin-bottom: 100px;
+                    @include responsive(xl){
+                        gap: 60px;
+                        margin-bottom: 60px;
+                    }
+                    @include responsive(md){
+                        gap: 40px;
+                        margin-bottom: 40px;
+                    }
+                    .variation{
+                        .heading{
+                            font-size: 30px;    
+                            margin-bottom: 50px;    
+                            @include responsive(xl){
+                                margin-bottom: 30px;    
+                            }
+                            @include responsive(md){
+                                font-size: 20px;        
+                            }
+                            @include responsive(sm){
+                                font-size: 14px;    
+                                margin-bottom: 20px;    
+                            }
+                        }
+                        .text-wrap{
+                            p{
+                                font-size: 36px;
+                                   font-family: $sourceSans;
+                                color: $lightBlack;
+                                letter-spacing: 0.2em;
+                                @include responsive(md){
+                                    font-size: 24px;        
+                                }
+                                @include responsive(sm){
+                                    font-size: 16px;        
+                                }
+                                .time{
+                                    margin-right: 20px;
+                                    @include responsive(lg){
+                                        margin-right: 10px;
+                                    }
+                                }
+                                .amount{
+                                    letter-spacing: 0.1em;
+                                    font-weight: 700;
+                                    margin-left: 20px;
+                                    @include responsive(lg){
+                                        margin-left: 10px;
+                                    }
+                                }
+                                .subtext{
+                                    font-size: 26px;
+                                    @include responsive(md){
+                                        font-size: 16px;        
+                                    }
+                                    @include responsive(sm){
+                                        font-size: 12px;        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .description-wrap{
+                    p{
+                        font-size: 26px;
+                        font-family: $sourceSans;
+                        letter-spacing: 0.1em;
+                        color: $lightBlack;
+                        @include responsive(md){
+                            font-size: 16px;        
+                        }
+                        @include responsive(sm){
+                            font-size: 12px;        
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
