@@ -2,7 +2,7 @@
     $textTwoColumn = $block;
 ?>
 
-<section class="text-two-column">
+<section class="text-two-column" <?php if ($textTwoColumn['section_id']) {?> id="<?php echo $textTwoColumn['section_id']?>" <?php }?>>
     <div class="inner">
         <?php if ($textTwoColumn['title']) {?>
             <h2 class="heading title">
@@ -18,7 +18,7 @@
                 <?php }?>
                 <?php if ($textTwoColumn['left']['button']['url'] && $textTwoColumn['left']['button']['title']) {?>
                     <div class="button-wrap">
-                        <a href="<?php echo $textTwoColumn['left']['button']['url']?>" class="global-button"><?php echo $textTwoColumn['left']['button']['title']?></a>
+                        <a href="<?php echo $textTwoColumn['left']['button']['url']?>" class="global-button"><span><?php echo $textTwoColumn['left']['button']['title']?></span></a>
                     </div>
                 <?php }?>
             </div>

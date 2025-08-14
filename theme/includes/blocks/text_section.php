@@ -35,7 +35,7 @@
 </style>
 
 
-<section class="text-section <?php echo $textSection['background_color']?>">
+<section class="text-section <?php echo $textSection['background_color']?>" <?php if ($textSection['section_id']) {?> id="<?php echo $textSection['section_id']?>" <?php }?>>
     <div class="inner">
         <?php if ($textSection['heading']) {?>
             <h2 class="heading title">

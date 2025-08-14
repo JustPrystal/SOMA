@@ -3,6 +3,25 @@
     "title": "Text Section",
     "fields": [
         {
+            "key": "field_689e415d80d06",
+            "label": "Section Id",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_689cfebddce5b",
             "label": "Heading",
             "name": "heading",
@@ -140,5 +159,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1755122609
+    "modified": 1755201904
 }

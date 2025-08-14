@@ -82,6 +82,25 @@ section.text-two-column{
                 .button-wrap{
                     display: flex;
                     width: fit-content;
+                    .global-button {
+                        &:hover{
+                            span{
+                                color: $white;
+                            }
+                        }
+                        &::before{
+                            z-index: 0;
+                        }
+                        &:after{
+                            z-index: 1;
+                        }
+                        span{
+                            transition: 0.3s ease color;
+                            position: relative;
+                            z-index: 2;
+                            color: $lightBlack;
+                        }
+                    }
                 }
             }
             .right{

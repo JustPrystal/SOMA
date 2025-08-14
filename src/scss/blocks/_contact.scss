@@ -151,8 +151,14 @@ section.contact-section{
             width: 100%;
             .form-wrap{
                 width: 47%;
+                min-height: 690px;
+                @include responsive(md){
+                    min-height: 660px;
+                }
                 @include responsive(sm){
                     width: 100%;
+                    min-height: unset;
+                    min-height: 185px;
                 }
                 .text{
                     font-size: 36px;
@@ -199,6 +205,9 @@ section.contact-section{
                         @include responsive(xs){
                             border-radius: 14px;    
                         }
+                        &::placeholder{
+                            color: #999999;
+                        }
                     }
                     textarea{
                         border-radius: 28px;
@@ -242,7 +251,7 @@ section.contact-section{
                         text-transform: uppercase;
                         font-family: $sourceSans;
                         letter-spacing: 0.255em;
-                        min-height: 60px;
+                        min-height: 60px;   
                         margin: 0 0 0 auto;
                         @include responsive(md){
                             font-size: 16px;
@@ -254,6 +263,14 @@ section.contact-section{
                             min-height: unset;
                             border-radius: 20px;
                             margin: 0;
+                        }
+                    }
+                }
+                .wpforms-confirmation-container-full{
+                    p{
+                        font-family: $sourceSans;
+                        @include responsive(sm){
+                            font-size: 14px;
                         }
                     }
                 }

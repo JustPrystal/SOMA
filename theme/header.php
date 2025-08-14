@@ -37,4 +37,6 @@
 
   <div class="all">
       
-    <?php require_once(get_stylesheet_directory() . "/navigation.php"); ?>
+    <?php if ( !is_page( 'booking-notice' ) ) {
+      require_once(get_stylesheet_directory() . "/navigation.php");
+    }?>

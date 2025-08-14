@@ -19,12 +19,12 @@
 html, body { 
     margin:0;
     padding:0;
-  
-    
-  
 }
 body {
     position:relative;
+    &.overflow-hidden{
+      overflow: hidden;
+    }
 }
 
 .global-button{
@@ -39,6 +39,26 @@ body {
   text-transform: uppercase;
   font-family: $sourceSans;
   letter-spacing: 0.255em;
+  transition: 0.3s ease background-color, 0.3s ease color;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    color: $white;
+    background-color: transparent;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
   @include responsive(md){
     font-size: 16px;
     padding: 16px 28px;

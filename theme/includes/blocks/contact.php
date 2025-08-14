@@ -1,24 +1,26 @@
 <?php $contact = $block; ?>
 
     <style>
-        .contact-section .right-overlay{
-            background-image: url(<?php echo $contact['image_overlay']['url']?>);
-            background-size: contain;
-            position:absolute;
-            right: 0;
-            bottom:-20px;
-            width: 45%;
-            min-height: 800px;
-            background-repeat: no-repeat;
-            background-position: bottom right;
-            @media(max-width:767px){
-                min-height: 260px;
-                width: 70%;
+        <?php if ($contact['image_overlay']) { ?>
+            .contact-section .right-overlay{
+                background-image: url(<?php echo $contact['image_overlay']['url']?>);
+                background-size: contain;
+                position:absolute;
+                right: 0;
+                bottom:-20px;
+                width: 45%;
+                min-height: 800px;
+                background-repeat: no-repeat;
+                background-position: bottom right;
+                @media(max-width:767px){
+                    min-height: 260px;
+                    width: 70%;
+                }
             }
-        }
+        <?php }?>
     </style>
 
-<section class="contact-section">
+<section class="contact-section" <?php if ($contact['section_id']) {?> id="<?php echo $contact['section_id']?>" <?php }?>>
     <div class="inner">
         <?php if ($contact['heading']) {?>
             <h2 class="heading title">

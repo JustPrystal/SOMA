@@ -28,7 +28,7 @@
     <?php }?>
 </style>
 
-<section class="multiple-cta-section">
+<section class="multiple-cta-section" <?php if ($multiple_cta_section['section_id']) {?> id="<?php echo $multiple_cta_section['section_id']?>" <?php }?>>
     <div class="inner">
         <?php if ($multiple_cta_section['heading']) {?>
             <h2 class="heading title">

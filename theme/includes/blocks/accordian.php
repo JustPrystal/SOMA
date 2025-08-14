@@ -2,7 +2,7 @@
     $accordian = $block;
 ?>
 
-<section class="accordian-section">
+<section class="accordian-section" <?php if ($accordian['section_id']) {?> id="<?php echo $accordian['section_id']?>" <?php }?>>
     <div class="inner">
         <?php if ($accordian['heading']) { ?>
             <h2 class="heading slide-from-top"><?php echo $accordian['heading'] ?></h2>
@@ -31,9 +31,9 @@
                             <?php }?>
                             <?php if ($accordian_content['content']) { ?>
                                 <div class="accordion-panel">
-                                    <p class="description">
+                                    <div class="description-wrap">
                                         <?php echo $accordian_content['content']; ?>
-                                    </p>
+                                    </div>
                                 </div>
                             <?php }?>
                         </li>

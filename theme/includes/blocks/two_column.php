@@ -2,7 +2,7 @@
     $twoColumn = $block;
 ?>
 
-<section class="two-column">
+<section class="two-column" <?php if ($twoColumn['section_id']) {?> id="<?php echo $twoColumn['section_id']?>" <?php }?>>
     <div class="inner">
         <h2 class="heading title">
             <?php echo $twoColumn['title']?>

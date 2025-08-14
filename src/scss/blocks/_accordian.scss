@@ -120,25 +120,36 @@ section.accordian-section{
                         @include responsive(sm){
                             padding-top: 10px;
                         }
-                        .description{
-                            margin-bottom: 10px;
-                            font-family: $sourceSans;
-                            font-size: 26px;
-                            font-weight: 400;
-                            text-align: left;
-                            line-height: 120%;
-                            letter-spacing: 0.1em;
-                            color: $lightBlack;
-                            margin-left: 50px;
-                            @include responsive(md){
-                                font-size: 20px;
+                        .description-wrap{
+                            p,ul{
+                                margin-bottom: 10px;
+                                font-family: $sourceSans;
+                                font-size: 26px;
+                                font-weight: 400;
+                                text-align: left;
+                                line-height: 120%;
+                                letter-spacing: 0.1em;
+                                color: $lightBlack;
+                                margin-left: 50px;
+                                @include responsive(md){
+                                    font-size: 20px;
+                                }
+                                @include responsive(sm){
+                                    font-size: 10px;
+                                    margin-left: 15px;
+                                }
+                                &:last-of-type{
+                                    margin-bottom: 0;
+                                }
                             }
-                            @include responsive(sm){
-                                font-size: 10px;
-                                margin-left: 15px;
-                            }
-                            &:last-of-type{
-                                margin-bottom: 0;
+                            ul{
+                                li{
+                                    margin-bottom: 5px;
+                                    list-style-type: disc;
+                                    &::marker{
+                                        color: $yellow;
+                                    }
+                                }
                             }
                         }
                     }

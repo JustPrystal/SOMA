@@ -58,7 +58,7 @@
             <?php echo $check_in['text']?>
         </p>
         <div class="button-wrap">
-            <a class="global-button" href="<?php echo $check_in['button']['url']?>"><?php echo $check_in['button']['title']?></a>
+            <a class="global-button" id="confirm-checkin" href="<?php echo $check_in['button']['url']?>"><?php echo $check_in['button']['title']?></a>
         </div>
     </div>
     <?php if ($check_in['right_overlay']) { ?>
@@ -69,3 +69,19 @@
         <div class="left-overlay"></div>
     <?php }?>
 </section>
+
+<script>
+jQuery(document).ready(function($) {
+    $('.check-in #confirm-checkin').on('click', function(e) {
+        e.preventDefault();
+
+        // Set cookie for ~20 years
+        var expires = new Date();
+        expires.setFullYear(expires.getFullYear() + 20);
+        document.cookie = "checkin_done=1; path=/; expires=" + expires.toUTCString();
+
+        // Redirect to homepage
+        window.location.href = "/";
+    });
+});
+</script>

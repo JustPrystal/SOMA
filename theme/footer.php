@@ -14,6 +14,20 @@
       pointer-events: none; 
     }
   <?php }?>
+  <?php if ($footer['button_background']) { ?>
+    
+  .global-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('<?php echo $footer['button_background']['url']; ?>');
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -2;
+  }
+  <?php }?>
 </style>
   <footer class="site-footer">
     <?php if ($footer['background_image']) { ?>

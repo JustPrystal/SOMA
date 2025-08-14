@@ -38,6 +38,7 @@
                         <?php }?>
                     <?php }?>
                 </div>
+                <div class="overlay"></div>
             <?php }?>
         </div>
     </div>
@@ -46,13 +47,38 @@
 
 <script>
   jQuery(document).ready(function($) {
-    $('.site-header .hamburger-wrap').hover(
-      function() { // mouse enter
-        $('.site-header .hamburger-wrap .links-wrap').addClass("visible");
-      },
-      function() { // mouse leave
-        $('.site-header .hamburger-wrap .links-wrap').removeClass("visible");
-      }
-    );
-  });
+    const hamburger = $('.site-header .hamburger-wrap .hamburger');
+    const links = $('.site-header .hamburger-wrap .links-wrap');
+    const overlay = $('.site-header .hamburger-wrap .overlay');
+    const body = $('body');
+
+
+    // Open/close when tapping hamburger
+    hamburger.on('touchstart click', function(e) {
+        e.stopPropagation(); // prevent triggering document click   
+        links.toggleClass("visible");
+        overlay.show();
+        body.addClass("overflow-hidden");
+    });
+    
+    // Close when tapping outside links-wrap
+    $(document).on('touchstart click', function(e) {
+        if (!$(e.target).closest('.site-header .hamburger-wrap .links-wrap').length) {
+            links.removeClass("visible");
+            overlay.hide();
+            body.removeClass("overflow-hidden");
+        }
+    });
+
+    // Prevent closing when clicking inside links-wrap
+    links.on('touchstart click', function(e) {
+        e.stopPropagation();
+    });
+    // Close when clicking a .link-wrap inside links
+    links.find('.link-wrap').on('touchstart click', function() {
+        links.removeClass("visible");
+        overlay.hide();
+        body.removeClass("overflow-hidden");
+    });
+});
 </script>
