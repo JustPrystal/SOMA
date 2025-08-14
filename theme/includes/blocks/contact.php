@@ -1,5 +1,23 @@
 <?php $contact = $block; ?>
 
+    <style>
+        .contact-section .right-overlay{
+            background-image: url(<?php echo $contact['image_overlay']['url']?>);
+            background-size: contain;
+            position:absolute;
+            right: 0;
+            bottom:-20px;
+            width: 45%;
+            min-height: 800px;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            @media(max-width:767px){
+                min-height: 260px;
+                width: 70%;
+            }
+        }
+    </style>
+
 <section class="contact-section">
     <div class="inner">
         <?php if ($contact['heading']) {?>
@@ -28,14 +46,6 @@
                         <?php echo $contact['map_embed']?>
                     </div>
                 <?php }?>
-                <div class="form-wrap">
-                        <?php if ($contact['form_details']['text']) { ?>
-                            <p class="text"><?php echo $contact['form_details']['text']?></p>
-                        <?php }?>
-                        <?php if ($contact['form_details']['embed']) { 
-                            echo do_shortcode( $contact['form_details']['embed']);
-                        }?>
-                </div>
             </div>
             <div class="right">
                 <?php if ($contact['text_description']) {?>
@@ -45,5 +55,18 @@
                 <?php }?>
             </div>
         </div>
+        <div class="bottom-content">
+            <div class="form-wrap">
+                    <?php if ($contact['form_details']['text']) { ?>
+                        <p class="text"><?php echo $contact['form_details']['text']?></p>
+                    <?php }?>
+                    <?php if ($contact['form_details']['embed']) { 
+                        echo do_shortcode( $contact['form_details']['embed']);
+                    }?>
+            </div>
+        </div>
+    </div>
+    <div class="right-overlay">
+
     </div>
 </section>

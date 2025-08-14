@@ -41,6 +41,12 @@
             case 'contact':
               include 'blocks/contact.php';
               break;
+            case 'divider':
+              include 'blocks/divider.php';
+              break;
+            case 'check_in':
+              include 'blocks/check_in.php';
+              break;
             
           }
         }

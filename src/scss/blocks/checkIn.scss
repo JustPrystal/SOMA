@@ -1,0 +1,55 @@
+section.check-in{
+    padding: 120px 40px 160px;
+    background-color: $lightBlack;
+    position: relative;
+    overflow: hidden;
+    min-height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include responsive(sm){
+        min-height: 900px;
+    }
+
+    .inner{
+        max-width: 1660px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo{
+            max-width: 220px;
+            width: 100%;
+            display: block;
+            margin-bottom: 60px;
+            @include responsive(sm){
+                max-width: 150px;
+                margin-bottom: 20px;
+            }
+        }
+        .text{
+            font-family: $rexton;
+            color: $white;
+            line-height: 160%;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            font-size: 28px;
+            @include responsive(md){
+                font-size: 20px;
+                margin-bottom: 40px;
+            }
+            @include responsive(sm){
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            
+        }
+        .button-wrap{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

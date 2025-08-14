@@ -108,9 +108,13 @@
     <?php if ($banner['top_right_overlay']) { ?>
         <div class="top-right-overlay">
         </div>
-        <div class="bottom-left-overlay">
-            <div class="overlay"></div>
-            <div class="line-image"></div>
-        </div>
     <?php }?>
+    <div class="bottom-left-overlay">
+        <?php if ( $banner['bottom_left_overlay']['overlay']) { ?>
+            <div class="overlay"></div>
+        <?php }?>
+        <?php if ($banner['bottom_left_overlay']['line_image']) { ?>
+            <div class="line-image"></div>
+        <?php }?>
+    </div>
 </section>

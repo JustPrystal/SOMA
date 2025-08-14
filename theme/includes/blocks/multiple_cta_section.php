@@ -1,28 +1,31 @@
 <?php $multiple_cta_section = $block;?>
 
+
 <style>
-    .multiple-cta-section .left-underlay{
-        background-image: url(<?php echo $multiple_cta_section['image']['url']?>);
-        position: absolute;
-        width: 40%; 
-        height: 90%;
-        left: -40px;
-        bottom: -10%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: 1;
-        @media(max-width:1499px){
-            height: 70%;
+    <?php if ($multiple_cta_section['image']) {?>
+        .multiple-cta-section .left-underlay{
+            background-image: url(<?php echo $multiple_cta_section['image']['url']?>);
+            position: absolute;
+            width: 40%; 
+            height: 90%;
+            left: -40px;
+            bottom: -10%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 1;
+            @media(max-width:1499px){
+                height: 70%;
+            }
+            @media(max-width:1249px){
+                height: 60%;
+            }
+            @media(max-width:767px){
+                width: 250px;
+                height: 400px;
+                bottom: -14%;
+            }
         }
-        @media(max-width:1249px){
-            height: 60%;
-        }
-        @media(max-width:767px){
-            width: 250px;
-            height: 400px;
-            bottom: -14%;
-        }
-    }
+    <?php }?>
 </style>
 
 <section class="multiple-cta-section">

@@ -1,7 +1,28 @@
-<?php 
-
+<?php
+    $footer = get_field('footer_fields', 'option');
 ?>
-  
+<style>
+  <?php if ($footer['background_image']) { ?>
+    .site-footer .background{
+      background-image:url(<?php echo $footer['background_image']['url']?>);
+      position: absolute;
+      width: 100%;
+      height:100%;
+      background-size: cover;
+      background-repeat:no-repeat;
+      z-index: 1;
+      pointer-events: none; 
+    }
+  <?php }?>
+</style>
+  <footer class="site-footer">
+    <?php if ($footer['background_image']) { ?>
+      <div class="background"></div>
+    <?php }?>
+    <div class="inner">
+      <img src="<?php echo $footer['logo']['url']?>" alt="<?php echo $footer['logo']['alt']?>">
+    </div>
+  </footer>
        
     
     </div><!-- closing all div -->

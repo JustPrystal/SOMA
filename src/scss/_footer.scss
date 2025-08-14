@@ -1,0 +1,40 @@
+.site-footer{
+    display: flex;
+    width: 100%;
+    position: relative;
+    min-height: 500px;
+    @include responsive(xl){
+        min-height: 400px;
+    }
+    @include responsive(md){
+        min-height: 300px;
+    }
+    @include responsive(sm){
+        min-height: 150px;
+    }
+    .inner{
+        max-width: 1660px;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        padding: 40px;
+        margin: 0 auto;
+        justify-content: end;
+        align-items: end;
+        height: auto;
+        display: flex;
+        @include responsive(md){
+            padding: 10px 25px;
+        }
+        img{
+            max-width: 300px;
+            width: 100%;
+            @include responsive(md){
+                max-width: 200px;
+            }
+            @include responsive(sm){
+                max-width: 150px;
+            }
+        }
+    }
+}

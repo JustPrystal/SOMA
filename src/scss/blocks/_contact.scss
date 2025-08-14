@@ -1,6 +1,11 @@
 section.contact-section{
     background-color: $lightBlack;
     padding: 100px 40px;
+    position: relative;
+    overflow: hidden;
+    @include responsive(md){
+        padding: 60px 20px 160px; 
+    }
     .inner{
         display: flex;
         max-width: 1660px;
@@ -33,20 +38,46 @@ section.contact-section{
             width: 100%;
             margin: 0 auto;
             justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 60px;
+            @include responsive(sm){
+                margin-bottom: 50px;
+                flex-direction: column;
+            }
             .left{
                 width: 47%;
+                @include responsive(sm){
+                    width: 100%;
+                }
                 .contact-details-wrap{
                     display:flex;
                     flex-direction: column;
                     gap: 40px;
-                    margin-bottom: 100px;
+                    margin-bottom: 60px;
+                    @include responsive(md){
+                        gap: 30px;
+                    }
+                    @include responsive(sm){
+                        margin-bottom: 40px;
+                        gap: 20px;
+                    }
                     .detail-wrap{
                         display: flex;
                         align-items:flex-start;
                         gap: 20px;
+                        @include responsive(sm){
+                            max-width: 220px;   
+                            gap: 10px;
+                        }
                         img{
                             max-width: 50px;
                             width: 100%;
+                            @include responsive(md){
+                                max-width: 40px;
+                            }
+                            @include responsive(sm){
+                                max-width: 22px;    
+                            }
                         }
                         a{
                             font-family: $sourceSans;
@@ -55,96 +86,174 @@ section.contact-section{
                             text-decoration: none;
                             font-weight: 400;
                             letter-spacing: 0.1em;
+                            @include responsive(md){
+                                font-size: 24px;
+                            }
+                            @include responsive(sm){
+                                font-size: 14px;
+                            }
                         }
                     }
                 }
                 .map-wrap{
                     max-width: 770px;
-                    margin-bottom: 100px;
                     iframe{
                         width: 100%;
                         max-height: 300px;
                         border-radius: 40px;
-                    }
-                }
-                .form-wrap{
-                    .text{
-                        font-size: 36px;
-                        font-family: $sourceSans;
-                        color: $white;
-                        line-height: 100%;
-                        letter-spacing: 0.1em;
-                        margin-bottom: 40px;
-                    }
-                    .wpforms-field-container{
-                        input{
-                            background-color: $lightGray;
-                            width: 100%;
-                            max-width: 100%;
-                            border-radius: 28px;
-                            padding: 25px 30px;
-                            font-size: 26px;
-                            color: $lightBlack;
-                            font-family: $sourceSans;
-                            min-height: 56px;
+                        @include responsive(md){
+                            max-height: 250px;
                         }
-                        textarea{
-                            border-radius: 28px;
-                            background-color: $lightGray;    
-                            padding: 25px 30px;
-                            font-size: 26px;
-                            color: $lightBlack;
-                            font-family: $sourceSans;
-                            min-height: 300px;
-                            max-height: 500px;
-                            &::placeholder{
-                                color: #999999;
-                            }
-                        }
-                        .wpforms-error{
-                            font-family: $sourceSans;
-                        }
-                    }
-                    .wpforms-submit-container{
-                        display: flex;
-                        .wpforms-submit{
-                            font-size: 19px;
-                            padding: 20px 35px;
-                            border-radius: 30px;
-                            background-color: $yellow;
-                            color: $black;
-                            text-decoration: none;
-                            font-weight: 600;
-                            line-height: 100%;
-                            text-transform: uppercase;
-                            font-family: $sourceSans;
-                            letter-spacing: 0.255em;
-                            min-height: 60px;
-                            @include responsive(md){
-                                font-size: 16px;
-                                padding: 16px 28px;
-                            }
-                            @include responsive(sm){
-                                padding: 12px 20px;
-                                font-size: 10px;
-                            }
+                        @include responsive(xs){
+                            max-height: 125px;
+                            border-radius: 22px;
                         }
                     }
                 }
             }
             .right{
                 width: 42%;
+                @include responsive(xl){
+                    width: 50%;
+                }
+                @include responsive(sm){
+                    width: 100%;
+                }
                 ul{
                     font-size: 36px;
                     font-family: $sourceSans;
                     color: $white;
+                    margin-left: 25px;
+                    @include responsive(md){
+                        font-size: 24px;
+                    }
+                    @include responsive(sm){
+                        font-size: 14px;
+                    }
                     li{
-                        margin-bottom: 50px;
+                        margin-bottom: 30px;
+                        @include responsive(md){
+                            margin-bottom: 20px;
+                        }
                         &:first-of-type{
                             color: $yellow;
                         }
                         &:last-of-type{
                             margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom-content{
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            .form-wrap{
+                width: 47%;
+                @include responsive(sm){
+                    width: 100%;
+                }
+                .text{
+                    font-size: 36px;
+                    font-family: $sourceSans;
+                    color: $white;
+                    line-height: 100%;
+                    letter-spacing: 0.1em;
+                    margin-bottom: 40px;
+                    @include responsive(md){
+                        font-size: 24px;
+                        margin-bottom: 30px;
+                    }
+                    @include responsive(sm){
+                        font-size: 14px;    
+                        margin-bottom: 15px;
+                    }
+                }
+                .wpforms-field-container{
+                    .wpforms-field{
+                        padding: 12.5px 0;
+                        @include responsive(sm){
+                            padding: 5px 0;
+                        }
+                    }
+                    input{
+                        background-color: $lightGray;
+                        width: 100%;
+                        max-width: 100%;
+                        border-radius: 28px;
+                        padding: 25px 30px;
+                        font-size: 26px;
+                        color: $lightBlack;
+                        font-family: $sourceSans;
+                        min-height: 56px;
+                        @include responsive(md){
+                            font-size: 16px;
+                        }
+                        @include responsive(sm){
+                            // border-radius: 12px;
+                            min-height: 22px;
+                            font-size: 12px;
+                            padding: 8px 12px;
+                        }
+                        @include responsive(xs){
+                            border-radius: 14px;    
+                        }
+                    }
+                    textarea{
+                        border-radius: 28px;
+                        background-color: $lightGray;    
+                        padding: 25px 30px;
+                        font-size: 26px;
+                        color: $lightBlack;
+                        font-family: $sourceSans;
+                        min-height: 300px;
+                        max-height: 500px;
+                        @include responsive(md){
+                            font-size: 16px;
+                        }
+                        @include responsive(sm){
+                            font-size: 12px;
+                            padding: 10px 15px;
+                            min-height: 90px;
+                        }
+                        @include responsive(xs){
+                            border-radius: 14px;
+                        }
+                        &::placeholder{
+                            color: #999999;
+                        }
+                    }
+                    .wpforms-error{
+                        font-family: $sourceSans;
+                    }
+                }
+                .wpforms-submit-container{
+                    display: flex;
+                    .wpforms-submit{
+                        font-size: 19px;
+                        padding: 20px 35px;
+                        border-radius: 30px;
+                        background-color: $yellow;
+                        color: $black;
+                        text-decoration: none;
+                        font-weight: 600;
+                        line-height: 100%;
+                        text-transform: uppercase;
+                        font-family: $sourceSans;
+                        letter-spacing: 0.255em;
+                        min-height: 60px;
+                        margin: 0 0 0 auto;
+                        @include responsive(md){
+                            font-size: 16px;
+                            padding: 16px 28px;
+                        }
+                        @include responsive(sm){
+                            padding: 12px 20px;
+                            font-size: 10px;
+                            min-height: unset;
+                            border-radius: 20px;
+                            margin: 0;
                         }
                     }
                 }
