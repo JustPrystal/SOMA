@@ -8,7 +8,7 @@ section.two-column{
         padding: 80px 40px;
     }
     @include responsive(sm){
-        padding: 60px 20px;
+        padding: 60px 25px;
     }
     .inner{
         max-width: 1660px;

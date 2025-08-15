@@ -11,7 +11,7 @@
         padding: 60px 20px 0px 20px;
     }
     @include responsive(xs){
-        padding: 50px 20px 0px 20px;
+        padding: 50px 25px 0px 25px;
     }
     .inner{
         max-width: 1660px;
@@ -29,6 +29,48 @@
             width: fit-content;
             height: fit-content;
             display:flex;
+        }
+        .wrap{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            @include responsive(sm){
+                gap: 15px;
+            }
+        }
+        .language-wrap{
+            display: flex;
+            gap: 10px;
+            .change-language-english, .change-language-french{
+                font-family: $sourceSans;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 20px;
+                cursor: pointer;
+                @include responsive(md){
+                    font-size: 16px;
+
+                }
+                @include responsive(sm){
+                    font-size: 14px;
+
+                }
+                &.active{
+                    font-weight: 700;
+                }
+            }
+            span{
+                font-weight: 700;
+                font-size: 20px;
+                @include responsive(md){
+                    font-size: 16px;
+
+                }
+                @include responsive(sm){
+                    font-size: 14px;
+
+                }
+            }
         }
         .hamburger-wrap{
             width: fit-content;

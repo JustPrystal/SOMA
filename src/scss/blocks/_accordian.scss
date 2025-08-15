@@ -5,7 +5,7 @@ section.accordian-section{
     background-color: $lightGray;
     padding: 80px 40px 60px;
     @include responsive(sm){
-        padding: 40px 20px;
+        padding: 40px 25px;
     }
     .inner{
         display: flex;

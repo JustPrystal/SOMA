@@ -1,5 +1,6 @@
 <?php
     $banner = $block;
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
 ?>
 
 <style>
@@ -94,9 +95,9 @@
         </div>
         <div class="right">
             <div class="image-wrap">
-                <?php if ($banner['banner_text']) { ?>
+                <?php if ($banner['banner_text_' . $lang]) { ?>
                     <div class="text-wrap">
-                        <?php echo $banner['banner_text']?>
+                        <?php echo $banner['banner_text_' . $lang]?>
                     </div>
                 <?php }?>
                 <?php if ($banner['banner_image']) { ?>

@@ -7,7 +7,7 @@ section.multiple-cta-section{
     position: relative;
     overflow: clip;
     @include responsive(sm){
-        padding: 60px 20px 100px;
+        padding: 60px 25px 100px;
     }
     .inner{
         max-width: 1660px;

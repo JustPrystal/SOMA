@@ -17,7 +17,7 @@
                     width: 70%;
                 }
             }
-        <?php }?>
+        <?php }?>   
     </style>
 
 <section class="contact-section" <?php if ($contact['section_id']) {?> id="<?php echo $contact['section_id']?>" <?php }?>>
