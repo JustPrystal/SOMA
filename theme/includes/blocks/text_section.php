@@ -1,5 +1,6 @@
 <?php
     $textSection = $block;
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
 ?>
 
 <style>
@@ -37,14 +38,14 @@
 
 <section class="text-section <?php echo $textSection['background_color']?>" <?php if ($textSection['section_id']) {?> id="<?php echo $textSection['section_id']?>" <?php }?>>
     <div class="inner">
-        <?php if ($textSection['heading']) {?>
+        <?php if ($textSection['heading_' . $lang]) {?>
             <h2 class="heading title">
-                <?php echo $textSection['heading']?>
+                <?php echo $textSection['heading_' . $lang]?>
             </h2>
         <?php }?>
-        <?php if ($textSection['text']) { ?>
+        <?php if ($textSection['text_' . $lang]) { ?>
             <div class="text-wrap">
-                <?php echo $textSection['text']?>
+                <?php echo $textSection['text_' . $lang]?>
             </div>
         <?php }?>
     </div>
