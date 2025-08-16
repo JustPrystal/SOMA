@@ -1,12 +1,15 @@
 <?php
     $twoColumn = $block;
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';  
 ?>
 
 <section class="two-column" <?php if ($twoColumn['section_id']) {?> id="<?php echo $twoColumn['section_id']?>" <?php }?>>
     <div class="inner">
+      <?php if ($twoColumn['title_' . $lang]) {?>
         <h2 class="heading title">
-            <?php echo $twoColumn['title']?>
+            <?php echo $twoColumn['title_' . $lang]?>
         </h2>
+      <?php }?>
         <div class="content">
             <?php if ($twoColumn['image']) { ?>
                 <div class="left">
@@ -14,45 +17,49 @@
                 </div>
             <?php }?>
             <div class="right">
-                <?php foreach ($twoColumn['content'] as $key => $content) { ?>
+              <?php if ($twoColumn['content_' . $lang]) { 
+                foreach ($twoColumn['content_' . $lang] as $key => $content) { ?>
                     <div class="text-wrap">
-                        <?php if ($content['heading']) { ?>
+                        <?php if ($content['heading_' . $lang]) { ?>
                             <h3 class="heading content-heading">
-                                <?php echo $content['heading']?>
+                                <?php echo $content['heading_' . $lang]?>
                             </h3>
                         <?php }?>
-                        <?php if ($content['subtext']) { ?>
+                        <?php if ($content['subtext_' . $lang]) { ?>
                             <h4 class="heading subheading">
-                                <?php echo $content['subtext']?>
+                                <?php echo $content['subtext_' . $lang]?>
                             </h4>
                         <?php }?>
-                        <?php if ($content['description']) { ?>
-                            <p class="description"><?php echo $content['description']?></p>
+                        <?php if ($content['description_' . $lang]) { ?>
+                            <p class="description"><?php echo $content['description_' . $lang]?></p>
                         <?php }?>
                     </div>
-                <?php }?>
+                <?php }
+              }?>
             </div>
         </div>
         <div class="slider-wrap two-column-slider">
              <div class="testimonial-slider">
                 <div class="testimonial-slides">
-                    <?php foreach ($twoColumn['content'] as $testimonial) { ?>
+                  <?php if ($twoColumn['content_' . $lang]) {
+                    foreach ($twoColumn['content_' . $lang] as $testimonial) { ?>
                         <div class="testimonial-slide">
-                            <?php if ($testimonial['heading']) { ?>
+                            <?php if ($testimonial['heading_' . $lang]) { ?>
                                 <h3 class="heading content-heading">
-                                    <?php echo $testimonial['heading']?>
+                                    <?php echo $testimonial['heading_' . $lang]?>
                                 </h3>
                             <?php }?>
-                            <?php if ($testimonial['subtext']) { ?>
+                            <?php if ($testimonial['subtext_' . $lang]) { ?>
                                 <h4 class="heading subheading">
-                                    <?php echo $testimonial['subtext']?>
+                                    <?php echo $testimonial['subtext_' . $lang]?>
                                 </h4>
                             <?php }?>
-                            <?php if ($testimonial['description']) { ?>
-                                <p class="description"><?php echo $testimonial['description']?></p>
+                            <?php if ($testimonial['description_' . $lang]) { ?>
+                                <p class="description"><?php echo $testimonial['description_' . $lang]?></p>
                             <?php }?>
                         </div>
-                    <?php } ?>
+                    <?php } 
+                  }?>
                 </div>
             </div>
         </div>

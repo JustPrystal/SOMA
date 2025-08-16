@@ -47,6 +47,7 @@
                 font-weight: 400;
                 font-size: 20px;
                 cursor: pointer;
+                color: $lightBlack;
                 @include responsive(md){
                     font-size: 16px;
 

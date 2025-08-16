@@ -18,9 +18,25 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_689f8f5447f10",
+                    "label": "English Content",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
                     "key": "field_68965da9d63df",
-                    "label": "Button",
-                    "name": "button",
+                    "label": "Button En",
+                    "name": "button_en",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -34,8 +50,8 @@
                 },
                 {
                     "key": "field_68965d3fd63dd",
-                    "label": "Links",
-                    "name": "links",
+                    "label": "Links En",
+                    "name": "links_en",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -53,6 +69,73 @@
                     "sub_fields": [
                         {
                             "key": "field_68965d9dd63de",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_689f8f8447f11",
+                    "label": "French Content",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_689f8f9a47f12",
+                    "label": "Button Fr",
+                    "name": "button_fr",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_689f8faa47f13",
+                    "label": "Links Fr",
+                    "name": "links_fr",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_689f8faa47f14",
                             "label": "Link",
                             "name": "link",
                             "type": "link",
@@ -88,5 +171,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1754685092
+    "modified": 1755287481
 }

@@ -24,6 +24,7 @@ section.text-section{
                 p, ul{
                     color: $lightBlack;
                     font-size: 26px;
+                    letter-spacing: 0.1em;
                     @include responsive(md){
                     font-size: 20px;
                     }
@@ -33,6 +34,7 @@ section.text-section{
                 }
                 h1,h2,h3,h4,h5,h6{
                     color: $lightBlack;
+                    letter-spacing: 0.1em;
                 }
             }
         }
@@ -68,17 +70,18 @@ section.text-section{
             }
             @include responsive(sm){
                 font-size: 22px;
-                margin-bottom: 50px;
+                margin-bottom: 30px;
             }
         }
         .text-wrap{
-            max-width: 62%;
+            max-width: 68%;
             width: 100%;
             @include responsive(xs){
                 max-width: 70%;
             }
             p{
                 margin-bottom: 60px;
+                letter-spacing: 0.1em;
                 @include responsive(md){
                     margin-bottom: 40px;
                 }
@@ -90,9 +93,10 @@ section.text-section{
                 }
             }
             p, ul{
-                font-size: 32px;
+                font-size: 36px;
                 font-family: $sourceSans;
                 color: $white;
+
                 @include responsive(md){
                     font-size: 24px;
                 }

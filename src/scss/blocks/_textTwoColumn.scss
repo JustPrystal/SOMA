@@ -39,7 +39,7 @@ section.text-two-column{
             gap: 40px;
             @include responsive(sm){
                 flex-direction: column;
-                gap: 60px;
+                // gap: 50px;
             }
             .left{
                 display: flex;
@@ -128,7 +128,7 @@ section.text-two-column{
                     .variation{
                         .heading{
                             font-size: 30px;    
-                            margin-bottom: 50px;    
+                            margin-bottom: 40px;    
                             @include responsive(xl){
                                 margin-bottom: 30px;    
                             }
@@ -141,11 +141,20 @@ section.text-two-column{
                             }
                         }
                         .text-wrap{
+                            margin-bottom: 25px;
+                            @include responsive(sm){
+                                margin-bottom: 15px;
+                            }
+                            &:last-of-type{
+                                margin-bottom: 0px;
+                            }
                             p{
                                 font-size: 36px;
-                                   font-family: $sourceSans;
+                                font-family: $sourceSans;
                                 color: $lightBlack;
                                 letter-spacing: 0.2em;
+                                
+
                                 @include responsive(md){
                                     font-size: 24px;        
                                 }
@@ -154,8 +163,16 @@ section.text-two-column{
                                 }
                                 .time{
                                     margin-right: 20px;
+                                    min-width: 263px;
+                                    display: inline-block;
                                     @include responsive(lg){
                                         margin-right: 10px;
+                                    }
+                                    @include responsive(md){    
+                                        min-width: 175px;
+                                    }
+                                    @include responsive(sm){    
+                                        min-width: 120px;
                                     }
                                 }
                                 .amount{
@@ -168,6 +185,7 @@ section.text-two-column{
                                 }
                                 .subtext{
                                     font-size: 26px;
+                                    letter-spacing: 0.15em;
                                     @include responsive(md){
                                         font-size: 16px;        
                                     }

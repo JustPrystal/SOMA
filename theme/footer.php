@@ -14,27 +14,30 @@
       pointer-events: none; 
     }
   <?php }?>
-  <?php if ($footer['button_background']) { ?>
-    
-  .global-button::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('<?php echo $footer['button_background']['url']; ?>');
-    background-size: cover;
-    background-position: center center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -2;
-  }
+  <?php if ($footer['button_background']) { ?> 
+    .global-button::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('<?php echo $footer['button_background']['url']; ?>');
+      background-size: cover;
+      background-position: center center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -2;
+    }
   <?php }?>
 </style>
   <footer class="site-footer">
     <?php if ($footer['background_image']) { ?>
       <div class="background"></div>
     <?php }?>
-    <div class="inner">
-      <img src="<?php echo $footer['logo']['url']?>" alt="<?php echo $footer['logo']['alt']?>">
+    <div class="content-wrap">
+      <div class="inner">
+        <a class="logo-wrap" href="/">
+          <img class="logo" src="<?php echo $footer['logo']['url']?>" alt="<?php echo $footer['logo']['alt']?>">
+        </a>
+      </div>
     </div>
   </footer>
        

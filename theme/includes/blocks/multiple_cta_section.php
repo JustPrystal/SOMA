@@ -1,4 +1,7 @@
-<?php $multiple_cta_section = $block;?>
+<?php 
+    $multiple_cta_section = $block;
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
+?>
 
 
 <style>
@@ -30,26 +33,28 @@
 
 <section class="multiple-cta-section" <?php if ($multiple_cta_section['section_id']) {?> id="<?php echo $multiple_cta_section['section_id']?>" <?php }?>>
     <div class="inner">
-        <?php if ($multiple_cta_section['heading']) {?>
+        <?php if ($multiple_cta_section['heading_' . $lang]) {?>
             <h2 class="heading title">
-                <?php echo $multiple_cta_section['heading']?>
+                <?php echo $multiple_cta_section['heading_' . $lang]?>
             </h2>
         <?php }?>
         <div class="cta-content-wrap">
-            <?php foreach ($multiple_cta_section['cta_content'] as $key => $content) { ?>
-                <div class="cta-wrap">
-                    <?php if ($content['heading']) { ?>
-                        <h4 class="heading">
-                            <?php echo $content['heading']?>
-                        </h4>
-                    <?php }?>
-                    <?php if ( $content['button']['title']) { ?>
-                        <div class="button-wrap">
-                            <a class="global-button"><?php echo $content['button']['title']?></a>
-                        </div>
-                    <?php }?>
-                </div>
-            <?php } ?>
+            <?php if ($multiple_cta_section['cta_content_' . $lang]) {
+                foreach ($multiple_cta_section['cta_content_' . $lang] as $key => $content) { ?>
+                    <div class="cta-wrap">
+                        <?php if ($content['heading_' . $lang]) { ?>
+                            <h4 class="heading">
+                                <?php echo $content['heading_' . $lang]?>
+                            </h4>
+                        <?php }?>
+                        <?php if ( $content['button_' . $lang]['title']) { ?>
+                            <div class="button-wrap">
+                                <a class="global-button"><?php echo $content['button_' . $lang]['title']?></a>
+                            </div>
+                        <?php }?>
+                    </div>
+                <?php }
+            }?>
         </div>
         <div class="slider-wrap cta-slider">
             <div class="close-btn">
@@ -59,28 +64,31 @@
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial-slides">
-                    <?php foreach ($multiple_cta_section['cta_content'] as $testimonial) { ?>
-                        <div class="testimonial-slide">
-                            <?php if ($testimonial['heading']) { ?>
-                                <h3 class="heading content-heading">
-                                    <?php echo $testimonial['heading']?>
-                                </h3>
-                            <?php }?>
-                            <?php if ($testimonial['description']) { ?>
-                                <div class="description-wrap">
-                                    <?php echo $testimonial['description']?>
+                    <?php if ($multiple_cta_section['cta_content_' . $lang]) {
+                        foreach ($multiple_cta_section['cta_content_' . $lang] as $testimonial) { ?>
+                            <div class="testimonial-slide">
+                                <?php if ($testimonial['heading_' . $lang]) { ?>
+                                    <h3 class="heading content-heading">
+                                        <?php echo $testimonial['heading_' . $lang]?>
+                                    </h3>
+                                <?php }?>
+                                <?php if ($testimonial['description_' . $lang]) { ?>
+                                    <div class="description-wrap">
+                                        <?php echo $testimonial['description_' . $lang]?>
+                                </div>
+                                <?php }?>
                             </div>
-                            <?php }?>
-                        </div>
-                    <?php } ?>
+                        <?php }
+                    }?>
                 </div>
             </div>
         </div>
         
     </div>
-    <div class="left-underlay">
-
-    </div>
+    <?php if ($multiple_cta_section['image']) { ?>
+        <div class="left-underlay">
+        </div>
+    <?php }?>
 </section>
 
 <script>

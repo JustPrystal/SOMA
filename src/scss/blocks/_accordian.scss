@@ -34,7 +34,7 @@ section.accordian-section{
         .description{
             font-size: 44px;
             font-family: $sourceSans;
-            max-width: 1024px;
+            max-width: 900px;
             text-align: center;
             font-weight: 600;
             line-height: 100%;
@@ -70,7 +70,8 @@ section.accordian-section{
                         .accordion-thumb{
                             .icon{
                                 svg{
-                                    transform: rotate(0);
+                                    // transform: rotate(0);
+                                    transform: rotate(90deg);
                                 }
                             }
                         }
@@ -87,10 +88,10 @@ section.accordian-section{
                         .title{
                             font-size: 36px;
                             font-family: $sourceSans;
-                            color: $black;
                             letter-spacing: 0.1em ;
                             font-weight: 400;
                             color: $lightBlack;
+                            line-height: 100%;
                             @include responsive(md){
                                 font-size: 28px;
                             }
@@ -104,7 +105,7 @@ section.accordian-section{
                             svg{
                                 width: 30px;
                                 height: 30px;
-                                transform: rotate(-90deg);
+                                // transform: rotate(-90deg);
                                 transition: 0.3s ease-in transform;
                                 @include responsive(sm){
                                     width: 10px;

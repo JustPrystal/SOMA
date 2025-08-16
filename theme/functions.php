@@ -16,5 +16,9 @@ add_action('template_redirect', function() {
         wp_redirect(home_url('/booking-notice/'));
         exit;
     }
+    if (!empty($_COOKIE['checkin_done']) && is_page('booking-notice')) {
+        wp_redirect(home_url('/'));
+        exit;
+    }
 });
 

@@ -17,6 +17,7 @@
     <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/social/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+    <title>SOMA</title>
     
     <?php wp_head();?>    
     <meta name="author" content="<?php bloginfo('name'); ?>" />

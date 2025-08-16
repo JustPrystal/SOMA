@@ -22,9 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_689f8af144995",
+            "label": "English Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_68969b3886c13",
-            "label": "Heading",
-            "name": "heading",
+            "label": "Heading En",
+            "name": "heading_en",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -42,8 +58,8 @@
         },
         {
             "key": "field_68969e0cb48a8",
-            "label": "Description",
-            "name": "description",
+            "label": "Description En",
+            "name": "description_en",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -61,8 +77,8 @@
         },
         {
             "key": "field_68969b5686c14",
-            "label": "Accordian Content",
-            "name": "accordian_content",
+            "label": "Accordian Content En",
+            "name": "accordian_content_en",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -117,6 +133,119 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_689f8b0f44996",
+            "label": "French Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_689f8b2a44997",
+            "label": "Heading Fr",
+            "name": "heading_fr",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_689f8b4044998",
+            "label": "Description Fr",
+            "name": "description_fr",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_689f8b6844999",
+            "label": "Accordian Content Fr",
+            "name": "accordian_content_fr",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_689f8b684499a",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_689f8b684499b",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -136,5 +265,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1755202799
+    "modified": 1755286416
 }

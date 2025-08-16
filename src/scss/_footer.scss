@@ -12,28 +12,41 @@
     @include responsive(sm){
         min-height: 150px;
     }
-    .inner{
-        max-width: 1660px;
+    .content-wrap{
         width: 100%;
-        position: relative;
-        z-index: 2;
-        padding: 40px;
-        margin: 0 auto;
-        justify-content: end;
-        align-items: end;
         height: auto;
-        display: flex;
+        padding: 40px;
         @include responsive(md){
             padding: 10px 25px;
         }
-        img{
-            max-width: 300px;
+        .inner{
+            max-width: 1660px;
             width: 100%;
-            @include responsive(md){
-                max-width: 200px;
+            position: relative;
+            z-index: 2;
+            // padding: 40px 0;
+            margin: 0 auto;
+            justify-content: end;
+            align-items: end;
+            height: 100%;
+            display: flex;
+            .logo-wrap{
+                display: flex;
+                height: fit-content;
+                width: fit-content;
             }
-            @include responsive(sm){
-                max-width: 150px;
+            .logo{
+                max-width: 300px;
+                width: 100%;
+                @include responsive(md){
+                    max-width: 200px;
+                }
+                @include responsive(sm){
+                    max-width: 150px;
+                }
+                @include responsive(xs){
+                    max-width: 80px;
+                }
             }
         }
     }

@@ -1,5 +1,5 @@
 section.check-in{
-    padding: 120px 40px 160px;
+    padding: 180px 40px 200px;
     background-color: $lightBlack;
     position: relative;
     overflow: hidden;
@@ -7,8 +7,11 @@ section.check-in{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    min-height: 100vh;
     @include responsive(sm){
         min-height: 900px;
+        padding: 180px 25px 200px;
     }
 
     .inner{
@@ -33,7 +36,7 @@ section.check-in{
             color: $white;
             line-height: 160%;
             text-align: center;
-            max-width: 800px;
+            max-width: 840px;
             margin-bottom: 60px;
             text-transform: uppercase;
             font-size: 28px;
@@ -50,6 +53,72 @@ section.check-in{
         .button-wrap{
             display: flex;
             justify-content: center;
+            .global-button {
+                cursor: pointer;
+                &:hover{
+                    span{
+                        color: $white;
+                    }
+                }
+                &::before{
+                    z-index: 0;
+                }
+                &:after{
+                    z-index: 1;
+                }
+                span{
+                    transition: 0.3s ease color;
+                    position: relative;
+                    z-index: 2;
+                    color: $lightBlack;
+                }
+            }
+        }
+    }
+    .language-wrap{
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        width: fit-content;
+        display: flex;
+        display: flex;
+        gap: 10px;
+        @include responsive(sm){
+            left: 25px;
+            top: 25px;
+
+        }
+        .change-language-english, .change-language-french{
+            font-family: $sourceSans;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 20px;
+            cursor: pointer;
+            color: $white;
+            @include responsive(md){
+                font-size: 16px;
+                
+            }
+            @include responsive(sm){
+                font-size: 14px;
+                
+            }
+            &.active{
+                font-weight: 700;
+            }
+        }
+        span{
+            color: $white;
+            font-weight: 700;
+            font-size: 20px;
+            @include responsive(md){
+                font-size: 16px;
+
+            }
+            @include responsive(sm){
+                font-size: 14px;
+
+            }
         }
     }
 }

@@ -22,25 +22,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_689a77808f2c8",
-            "label": "Title",
-            "name": "title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_689a778f88f44",
             "label": "Image",
             "name": "image",
@@ -65,9 +46,44 @@
             "mime_types": ""
         },
         {
+            "key": "field_689f81a33e60b",
+            "label": "English Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_689a77808f2c8",
+            "label": "Title En",
+            "name": "title_en",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_689a77a988f45",
-            "label": "Content",
-            "name": "content",
+            "label": "Content En",
+            "name": "content_en",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -85,8 +101,8 @@
             "sub_fields": [
                 {
                     "key": "field_689a77b788f46",
-                    "label": "Heading",
-                    "name": "heading",
+                    "label": "Heading En",
+                    "name": "heading_en",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -104,8 +120,8 @@
                 },
                 {
                     "key": "field_689a77cd88f47",
-                    "label": "Subtext",
-                    "name": "subtext",
+                    "label": "Subtext En",
+                    "name": "subtext_en",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -123,8 +139,121 @@
                 },
                 {
                     "key": "field_689a77d388f48",
-                    "label": "Description",
-                    "name": "description",
+                    "label": "Description En",
+                    "name": "description_en",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_689f81b83e60c",
+            "label": "French Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_689f81f73e60d",
+            "label": "Title Fr",
+            "name": "title_fr",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_689f82043e60e",
+            "label": "Content Fr",
+            "name": "content_fr",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_689f82043e60f",
+                    "label": "Heading Fr",
+                    "name": "heading_fr",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_689f82043e610",
+                    "label": "Subtext Fr",
+                    "name": "subtext_fr",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_689f82043e611",
+                    "label": "Description Fr",
+                    "name": "description_fr",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -160,5 +289,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1755201125
+    "modified": 1755284058
 }
