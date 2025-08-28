@@ -112,5 +112,14 @@
         setLangCookie('fr');
         $(this).addClass("active");
     });
+    if (!sessionStorage.getItem("checkin_done")) {
+        if (window.location.pathname !== "/booking-notice/") {
+            window.location.href = "/booking-notice/";
+        }
+    } else {
+        if (window.location.pathname === "/booking-notice/") {
+            window.location.href = "/";
+        }
+    }
 });
 </script>

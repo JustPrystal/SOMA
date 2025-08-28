@@ -129,6 +129,7 @@ section.multiple-cta-section{
             @include responsive(sm){
                 padding: 40px 20px;
                 top: 75px;
+                margin: auto 20px;
             }
             &.visible{
                 visibility: visible;

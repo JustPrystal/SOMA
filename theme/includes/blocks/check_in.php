@@ -102,7 +102,7 @@
 
 <script>
 jQuery(document).ready(function($) {
-    //redirect logic
+    /* //redirect logic
     $('.check-in #confirm-checkin').on('click', function(e) {
         e.preventDefault();
 
@@ -110,6 +110,26 @@ jQuery(document).ready(function($) {
         var expires = new Date();
         expires.setFullYear(expires.getFullYear() + 20);
         document.cookie = "checkin_done=1; path=/; expires=" + expires.toUTCString();
+
+        // Redirect to homepage
+        window.location.href = "/";
+    }); */
+    if (!sessionStorage.getItem("checkin_done")) {
+        if (window.location.pathname !== "/booking-notice/") {
+            window.location.href = "/booking-notice/";
+        }
+    } else {
+        if (window.location.pathname === "/booking-notice/") {
+            window.location.href = "/";
+        }
+    }
+
+    // When user confirms check-in
+    $('.check-in #confirm-checkin').on('click', function(e) {
+        e.preventDefault();
+
+        // Set sessionStorage
+        sessionStorage.setItem("checkin_done", "1");
 
         // Redirect to homepage
         window.location.href = "/";

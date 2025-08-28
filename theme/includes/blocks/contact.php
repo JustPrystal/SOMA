@@ -1,6 +1,7 @@
 <?php 
     $contact = $block;
     $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr';
+    $footer = get_field('footer_fields', 'option');
 ?>
 
     <style>
@@ -22,6 +23,12 @@
                 }
             }
         <?php }?>   
+        <?php if ($footer['button_background']) { ?>
+            section.contact-section .inner .bottom-content .form-wrap .wpcf7-submit:hover{
+                background-image: url('<?php echo $footer['button_background']['url']; ?>');
+                color: #fff;
+            }
+        <?php }?>
     </style>
 
 <section class="contact-section" <?php if ($contact['section_id']) {?> id="<?php echo $contact['section_id']?>" <?php }?>>
