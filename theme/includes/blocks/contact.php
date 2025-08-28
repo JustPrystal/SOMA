@@ -1,6 +1,6 @@
 <?php 
     $contact = $block;
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr';
 ?>
 
     <style>
@@ -41,7 +41,7 @@
                                     <img src="<?php echo $contactDetails['icon']['url']?>" alt="<?php echo $contactDetails['icon']['alt']?>">
                                 <?php }?>
                                 <?php if ($contactDetails['description']['url'] && $contactDetails['description']['title']) {?>
-                                    <a href="<?php echo $contactDetails['description']['url']?>"><?php echo $contactDetails['description']['title']?></a>
+                                    <a target="<?php echo esc_attr($contactDetails['description']['target']); ?>" href="<?php echo $contactDetails['description']['url']?>"><?php echo $contactDetails['description']['title']?></a>
                                 <?php }?>
                             </div>
                         <?php }?>

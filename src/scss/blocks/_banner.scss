@@ -3,7 +3,7 @@ section.banner{
     justify-content: center;
     align-items: center;
     padding: 140px 0 0 120px;
-    margin-top: -91px;
+    margin-top: -89px;
     background-color: $lightGray;
     overflow-x: clip;
     position: relative;
@@ -11,11 +11,14 @@ section.banner{
         padding: 140px 0 0 40px;
     }
     @include responsive(lg){
-        margin-top: -136px;
+        margin-top: -139px;
         padding: 180px 0 0 40px;
     }
+    @include responsive(md){
+        margin-top: -128px;
+    }
     @include responsive(sm){
-        margin-top: -169px;
+        margin-top: -144px;
         padding: 180px 0 0 20px;
     }   
     @include responsive(xs){

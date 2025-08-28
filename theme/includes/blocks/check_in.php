@@ -1,7 +1,7 @@
 <?php
     $check_in = $block;
     $footer = get_field('footer_fields', 'option');
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr';
 ?>
 
 <style>

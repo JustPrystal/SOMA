@@ -37,6 +37,7 @@
   ?>">
 
   <div class="all">
+    <div class="site-overlay"></div>
       
     <?php if ( !is_page( 'booking-notice' ) ) {
       require_once(get_stylesheet_directory() . "/navigation.php");

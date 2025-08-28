@@ -13,7 +13,7 @@ section.multiple-cta-section{
         max-width: 1660px;
         width: 100%;
         position: relative;
-        z-index: 2;
+        // z-index: 2;
         .heading{
             color: $white;
             font-family: $rexton;
@@ -78,8 +78,25 @@ section.multiple-cta-section{
                 .button-wrap{
                     display: flex;
                     margin: auto 0 0 0;
-                    .global-button{
+                    .global-button {
                         cursor: pointer;
+                        &:hover{
+                            span{
+                                color: $white;
+                            }
+                        }
+                        &::before{
+                            z-index: 0;
+                        }
+                        &:after{
+                            z-index: 1;
+                        }
+                        span{
+                            transition: 0.3s ease color;
+                            position: relative;
+                            z-index: 2;
+                            color: $lightBlack;
+                        }
                     }
                 }
             }
@@ -89,15 +106,20 @@ section.multiple-cta-section{
             background-color: $lightGray;
             padding: 100px;
             border-radius: 40px;
-            position: absolute;
-            top: 100px;
+            position: fixed;
+            // top: 20%;
+            top: 0;
+            bottom: 0;
+            height: fit-content;
+            margin: auto;
             left: 0;
             right: 0;
             max-width: 1280px;
-            margin: 0 auto;
+            // margin: 0 auto;
             visibility: hidden;
             transform: translateX(-200%);
             pointer-events: none;
+            z-index: 999;
             @include responsive(xl){
                 padding: 60px;
             }

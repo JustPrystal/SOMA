@@ -1,6 +1,6 @@
 <?php
     $twoColumn = $block;
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';  
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr';  
 ?>
 
 <section class="two-column" <?php if ($twoColumn['section_id']) {?> id="<?php echo $twoColumn['section_id']?>" <?php }?>>
@@ -17,7 +17,7 @@
                 </div>
             <?php }?>
             <div class="right">
-              <?php if ($twoColumn['content_' . $lang]) { 
+              <!-- <?php if ($twoColumn['content_' . $lang]) { 
                 foreach ($twoColumn['content_' . $lang] as $key => $content) { ?>
                     <div class="text-wrap">
                         <?php if ($content['heading_' . $lang]) { ?>
@@ -35,10 +35,35 @@
                         <?php }?>
                     </div>
                 <?php }
-              }?>
+              }?> -->
+              <div class="slider-wrap two-column-slider">
+                <div class="testimonial-slider">
+                    <div class="testimonial-slides">
+                      <?php if ($twoColumn['content_' . $lang]) {
+                        foreach ($twoColumn['content_' . $lang] as $testimonial) { ?>
+                            <div class="testimonial-slide">
+                                <?php if ($testimonial['heading_' . $lang]) { ?>
+                                    <h3 class="heading content-heading">
+                                        <?php echo $testimonial['heading_' . $lang]?>
+                                    </h3>
+                                <?php }?>
+                                <?php if ($testimonial['subtext_' . $lang]) { ?>
+                                    <h4 class="heading subheading">
+                                        <?php echo $testimonial['subtext_' . $lang]?>
+                                    </h4>
+                                <?php }?>
+                                <?php if ($testimonial['description_' . $lang]) { ?>
+                                    <p class="description"><?php echo $testimonial['description_' . $lang]?></p>
+                                <?php }?>
+                            </div>
+                        <?php } 
+                      }?>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
-        <div class="slider-wrap two-column-slider">
+        <!-- <div class="slider-wrap two-column-slider">
              <div class="testimonial-slider">
                 <div class="testimonial-slides">
                   <?php if ($twoColumn['content_' . $lang]) {
@@ -62,13 +87,16 @@
                   }?>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 
 <script>
   jQuery(document).ready(function($) {
     $('.two-column-slider .testimonial-slides').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
       arrows: true,
     //   dots: true,
       autoplay: true,
@@ -97,7 +125,15 @@
   <g id="Layer_1-2" data-name="Layer 1">
     <polygon class="cls-1" points="7.25 5.07 2.19 0 0 2.19 5.07 7.25 0 12.32 2.19 14.51 7.25 9.44 9.44 7.25 7.25 5.07"/>
   </g>
-</svg></button>`
+</svg></button>`,
+  responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+    ]
     });
   });
 </script>

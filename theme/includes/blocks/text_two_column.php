@@ -1,6 +1,6 @@
 <?php 
     $textTwoColumn = $block;
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr';
 ?>
 
 <section class="text-two-column" <?php if ($textTwoColumn['section_id']) {?> id="<?php echo $textTwoColumn['section_id']?>" <?php }?>>

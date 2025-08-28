@@ -323,6 +323,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68a8cd43b780c": {
+                    "key": "layout_68a8cd43b780c",
+                    "name": "accordian_with_image",
+                    "label": "Accordian With Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68a8cd4fb780d",
+                            "label": "Fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68a8cbdabae76"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -358,5 +389,5 @@
     ],
     "active": 1,
     "description": "Block Chooser for all content types that will have blocks.",
-    "modified": 1755135565
+    "modified": 1755893101
 }

@@ -1,6 +1,6 @@
 <?php 
     $multiple_cta_section = $block;
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr';
 ?>
 
 
@@ -16,6 +16,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             z-index: 1;
+            pointer-events: none;
             @media(max-width:1499px){
                 height: 70%;
             }
@@ -49,7 +50,11 @@
                         <?php }?>
                         <?php if ( $content['button_' . $lang]['title']) { ?>
                             <div class="button-wrap">
-                                <a class="global-button"><?php echo $content['button_' . $lang]['title']?></a>
+                                <a class="global-button">
+                                    <span class="text">
+                                        <?php echo $content['button_' . $lang]['title']?>
+                                    </span>
+                                </a>
                             </div>
                         <?php }?>
                     </div>
@@ -128,6 +133,7 @@
         const section = $(this).closest('.multiple-cta-section'); // find the section for the clicked button
         const sliderWrap = section.find('.slider-wrap');
         const slides = sliderWrap.find('.testimonial-slides');
+        const overlay = $(".site-overlay");
 
         // Get index of clicked button within all buttons in this section
         const buttonIndex = section.find('.cta-wrap .global-button').index(this);
@@ -135,6 +141,8 @@
         if (!sliderWrap.hasClass('visible')) {
             sliderWrap.addClass('visible');
         }
+        overlay.show();
+        $("body").addClass("overflow-hidden");
         slides.slick('slickGoTo', buttonIndex);
 
         // Force Slick to recalc positions
@@ -142,9 +150,12 @@
     });
     $('.multiple-cta-section .slider-wrap .close-btn').on('click', function() {
         const sliderWrap = $(this).closest('.slider-wrap');
+        const overlay = $(".site-overlay");
         if (sliderWrap.hasClass('visible')) {
             sliderWrap.removeClass('visible');
         }
+        overlay.hide();
+        $("body").removeClass("overflow-hidden");
     });
   });
 </script>

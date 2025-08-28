@@ -1,6 +1,6 @@
 <?php
     $header = get_field('header_fields', 'option');
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr';
 ?>
 
 
@@ -65,7 +65,7 @@
         e.stopPropagation(); // prevent triggering document click   
         links.toggleClass("visible");
         overlay.show();
-        body.addClass("overflow-hidden");
+        body.addClass("menu-active");
     });
 
     // Handle clicks on links inside the menu
@@ -74,7 +74,7 @@
         setTimeout(() => {
             links.removeClass("visible");
             overlay.hide();
-            body.removeClass("overflow-hidden");
+            body.removeClass("menu-active");
         }, 200); // small delay so scroll-to-section works smoothly
     });
 
@@ -83,7 +83,7 @@
         if (!$(e.target).closest('.site-header .hamburger-wrap .links-wrap, .site-header .hamburger-wrap .hamburger').length) {
             links.removeClass("visible");
             overlay.hide();
-            body.removeClass("overflow-hidden");
+            body.removeClass("menu-active");
         }
     });
 

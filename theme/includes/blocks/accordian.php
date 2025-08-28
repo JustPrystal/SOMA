@@ -1,6 +1,6 @@
 <?php
     $accordian = $block;
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en';
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr';
 ?>
 
 <section class="accordian-section" <?php if ($accordian['section_id']) {?> id="<?php echo $accordian['section_id']?>" <?php }?>>
